@@ -1,2 +1,5 @@
 Cloned from jbigkit-2.1 and add bootstraph.sh to use
 autotools and libtool for shared libraries.
+
+For the original source see:
+http://www.cl.cam.ac.uk/~mgk25/jbigkit/
