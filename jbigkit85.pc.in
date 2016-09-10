@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: JBIG-KIT 85
+Description: Implementation of the JBIG1 data compression standard (ITU-T T.85)
+Version: @VERSION@
+Libs: -L${libdir} -ljbig85
+Cflags: -I${includedir}
