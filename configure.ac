@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([jbigkit], [2.21], [pullmoll@t-online.de])
+AC_INIT([jbigkit], [2.22], [pullmoll@t-online.de])
 AM_INIT_AUTOMAKE(subdir-objects)
 
 AC_CONFIG_SRCDIR([libjbig/jbig_ar.c])
@@ -16,7 +16,10 @@ AC_PROG_MAKE_SET
 LT_INIT
 
 # Package check
-PKG_CHECK_MODULES([CHECK], [check >= 0.9.19])
+AC_ARG_ENABLE([tests],
+	AS_HELP_STRING([--enable-tests], [Enable codec tests]))
+
+AS_IF([test "x$enable_tests" = "xyes"], [PKG_CHECK_MODULES([CHECK], [check >= 0.9.19])])
 
 # Checks for libraries.
 AC_CHECK_LIB([jbig], [jbg_enc_init])
